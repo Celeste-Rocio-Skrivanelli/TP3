@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Archivos - File API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sección de selección -->
+    <section class="card">
+      <label for="fileInput" class="label-title">Seleccionar Imagen:</label>
+      
+      <!-- Input de tipo file oculto para dispararlo con el botón -->
+      <input type="file" id="fileInput" accept="image/*" style="display: none;">
+      
+      <button id="btnUpload" type="button">Subir Archivo</button>
+    </section>
+
+    <!-- Sección de detalles y previsualización -->
+    <section class="card" id="detailsCard" style="display: none;">
+      <div id="fileInfo">
+        <p><strong>Nombre:</strong> <span id="fileName"></span></p>
+        <p><strong>Tipo:</strong> <span id="fileType"></span></p>
+        <p><strong>Tamaño:</strong> <span id="fileSize"></span> bytes</p>
+      </div>
+      <div class="preview-container">
+        <img id="imagePreview" alt="Previsualización de imagen">
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
